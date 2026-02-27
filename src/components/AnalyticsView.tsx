@@ -7,13 +7,23 @@ export default function AnalyticsView() {
         <div className="flex items-center gap-3">
           <button className="px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
             </svg>
             最近30天
           </button>
           <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium flex items-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
             </svg>
             导出
           </button>
@@ -71,7 +81,12 @@ export default function AnalyticsView() {
             <h3 className="text-lg font-semibold text-gray-900">📊 任务消费力</h3>
             <button className="text-gray-400 hover:text-gray-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                />
               </svg>
             </button>
           </div>
@@ -82,41 +97,47 @@ export default function AnalyticsView() {
               <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
                 {/* 背景圆环 */}
                 <circle cx="100" cy="100" r="80" fill="none" stroke="#f3f4f6" strokeWidth="30" />
-                
+
                 {/* 已完成 - 绿色 */}
-                <circle 
-                  cx="100" cy="100" r="80" 
-                  fill="none" 
-                  stroke="#10b981" 
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#10b981"
                   strokeWidth="30"
                   strokeDasharray="502.4"
                   strokeDashoffset="125.6"
                   className="transition-all duration-1000"
                 />
-                
+
                 {/* 进行中 - 橙色 */}
-                <circle 
-                  cx="100" cy="100" r="80" 
-                  fill="none" 
-                  stroke="#f97316" 
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#f97316"
                   strokeWidth="30"
                   strokeDasharray="502.4"
                   strokeDashoffset="251.2"
                   className="transition-all duration-1000"
                 />
-                
+
                 {/* 审查中 - 蓝色 */}
-                <circle 
-                  cx="100" cy="100" r="80" 
-                  fill="none" 
-                  stroke="#3b82f6" 
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#3b82f6"
                   strokeWidth="30"
                   strokeDasharray="502.4"
                   strokeDashoffset="376.8"
                   className="transition-all duration-1000"
                 />
               </svg>
-              
+
               {/* 中心文字 */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <div className="text-4xl font-bold text-gray-900">500</div>
@@ -166,7 +187,12 @@ export default function AnalyticsView() {
               <button className="text-sm text-gray-600 hover:text-gray-900">右边重要度</button>
               <button className="text-gray-400 hover:text-gray-600">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
                 </svg>
               </button>
             </div>
@@ -183,9 +209,21 @@ export default function AnalyticsView() {
             </div>
 
             {[
-              { name: '网站重新设计', completed: 45, overdue: 3, progress: 80, color: 'bg-teal-500' },
+              {
+                name: '网站重新设计',
+                completed: 45,
+                overdue: 3,
+                progress: 80,
+                color: 'bg-teal-500',
+              },
               { name: '营销活动', completed: 32, overdue: 1, progress: 30, color: 'bg-blue-500' },
-              { name: '移动应用启动', completed: 25, overdue: 5, progress: 50, color: 'bg-purple-500' },
+              {
+                name: '移动应用启动',
+                completed: 25,
+                overdue: 5,
+                progress: 50,
+                color: 'bg-purple-500',
+              },
             ].map((project, i) => (
               <div key={i} className="space-y-2">
                 <div className="flex items-center justify-between">
@@ -197,7 +235,7 @@ export default function AnalyticsView() {
                   </div>
                 </div>
                 <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className={`h-full ${project.color} transition-all duration-500`}
                     style={{ width: `${project.progress}%` }}
                   ></div>
@@ -217,17 +255,32 @@ export default function AnalyticsView() {
             <button className="text-sm text-gray-600 hover:text-gray-900">任务修订</button>
             <button className="text-gray-400 hover:text-gray-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                />
               </svg>
             </button>
             <button className="text-gray-400 hover:text-gray-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
               </svg>
             </button>
             <button className="text-gray-400 hover:text-gray-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                />
               </svg>
             </button>
           </div>
@@ -239,14 +292,25 @@ export default function AnalyticsView() {
             {/* Y轴刻度 */}
             {[0, 1, 20, 30, 40, 50].map((val, i) => (
               <g key={i}>
-                <text x="10" y={280 - i * 50} className="text-xs fill-gray-400">{val}</text>
-                <line x1="40" y1={280 - i * 50} x2="780" y2={280 - i * 50} stroke="#f3f4f6" strokeWidth="1" />
+                <text x="10" y={280 - i * 50} className="text-xs fill-gray-400">
+                  {val}
+                </text>
+                <line
+                  x1="40"
+                  y1={280 - i * 50}
+                  x2="780"
+                  y2={280 - i * 50}
+                  stroke="#f3f4f6"
+                  strokeWidth="1"
+                />
               </g>
             ))}
 
             {/* X轴刻度 */}
             {[2, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((day, i) => (
-              <text key={i} x={60 + i * 65} y="295" className="text-xs fill-gray-400">{day}</text>
+              <text key={i} x={60 + i * 65} y="295" className="text-xs fill-gray-400">
+                {day}
+              </text>
             ))}
 
             {/* 绿色线条 - 完成的任务 */}
@@ -299,4 +363,3 @@ export default function AnalyticsView() {
     </div>
   );
 }
-

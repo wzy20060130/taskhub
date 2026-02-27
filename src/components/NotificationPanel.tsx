@@ -50,35 +50,25 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
   const getNotificationIcon = (type: string) => {
     switch (type) {
       case 'task':
-        return (
-          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-        );
+        return <div className="w-2 h-2 bg-blue-500 rounded-full"></div>;
       case 'mention':
-        return (
-          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-        );
+        return <div className="w-2 h-2 bg-red-500 rounded-full"></div>;
       case 'comment':
-        return (
-          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-        );
+        return <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
       default:
         return null;
     }
   };
 
-  const filteredNotifications = activeTab === 'unread' 
-    ? notifications.filter(n => !n.read)
-    : notifications;
+  const filteredNotifications =
+    activeTab === 'unread' ? notifications.filter(n => !n.read) : notifications;
 
   if (!isOpen) return null;
 
   return (
     <>
       {/* 背景遮罩 */}
-      <div 
-        className="fixed inset-0 z-40" 
-        onClick={onClose}
-      ></div>
+      <div className="fixed inset-0 z-40" onClick={onClose}></div>
 
       {/* 通知面板 */}
       <div className="absolute right-0 top-16 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden">
@@ -86,12 +76,14 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">通知</h3>
-            <button 
-              onClick={onClose}
-              className="text-gray-400 hover:text-gray-600"
-            >
+            <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -101,9 +93,7 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
             <button
               onClick={() => setActiveTab('all')}
               className={`pb-2 text-sm font-medium transition relative ${
-                activeTab === 'all'
-                  ? 'text-blue-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                activeTab === 'all' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               全部
@@ -114,9 +104,7 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
             <button
               onClick={() => setActiveTab('unread')}
               className={`pb-2 text-sm font-medium transition relative ${
-                activeTab === 'unread'
-                  ? 'text-blue-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                activeTab === 'unread' ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               未读
@@ -139,7 +127,7 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
           <div className="p-4">
             <div className="text-xs font-semibold text-gray-400 mb-3">今天</div>
             <div className="space-y-3">
-              {filteredNotifications.map((notification) => (
+              {filteredNotifications.map(notification => (
                 <div
                   key={notification.id}
                   className={`flex gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition ${
@@ -147,23 +135,17 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
                   }`}
                 >
                   {/* 状态指示器 */}
-                  <div className="flex-shrink-0 pt-1">
-                    {getNotificationIcon(notification.type)}
-                  </div>
+                  <div className="flex-shrink-0 pt-1">{getNotificationIcon(notification.type)}</div>
 
                   {/* 内容 */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <h4 className="text-sm font-medium text-gray-900">
-                        {notification.title}
-                      </h4>
+                      <h4 className="text-sm font-medium text-gray-900">{notification.title}</h4>
                       <span className="text-xs text-gray-500 whitespace-nowrap">
                         {notification.time}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-600 line-clamp-2">
-                      {notification.description}
-                    </p>
+                    <p className="text-sm text-gray-600 line-clamp-2">{notification.description}</p>
                   </div>
                 </div>
               ))}
@@ -173,13 +155,10 @@ export default function NotificationPanel({ isOpen, onClose }: NotificationPanel
           {/* 昨天 */}
           <div className="p-4 pt-0">
             <div className="text-xs font-semibold text-gray-400 mb-3">昨天</div>
-            <div className="text-sm text-gray-500 text-center py-4">
-              暂无通知
-            </div>
+            <div className="text-sm text-gray-500 text-center py-4">暂无通知</div>
           </div>
         </div>
       </div>
     </>
   );
 }
-

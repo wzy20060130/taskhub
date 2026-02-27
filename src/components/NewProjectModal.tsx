@@ -48,12 +48,14 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
         {/* 头部 */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-xl font-bold text-gray-900">新项目</h2>
-          <button
-            onClick={handleClose}
-            className="text-gray-400 hover:text-gray-600 transition"
-          >
+          <button onClick={handleClose} className="text-gray-400 hover:text-gray-600 transition">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -62,13 +64,11 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
         <div className="p-6 space-y-6">
           {/* 项目名称 */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              项目名称
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">项目名称</label>
             <input
               type="text"
               value={projectName}
-              onChange={(e) => setProjectName(e.target.value)}
+              onChange={e => setProjectName(e.target.value)}
               placeholder="网站重新设计ABC Corp"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
@@ -77,12 +77,10 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
           {/* 项目类型和日期 */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                项目类型
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">项目类型</label>
               <select
                 value={projectType}
-                onChange={(e) => setProjectType(e.target.value)}
+                onChange={e => setProjectType(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="进行中">进行中</option>
@@ -93,26 +91,34 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                日期
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">日期</label>
               <div className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg">
-                <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                <svg
+                  className="w-4 h-4 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
                 </svg>
-                <span className="text-sm text-gray-900">{startDate} → {endDate}</span>
+                <span className="text-sm text-gray-900">
+                  {startDate} → {endDate}
+                </span>
               </div>
             </div>
           </div>
 
           {/* 项目描述 */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              项目描述
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">项目描述</label>
             <textarea
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={e => setDescription(e.target.value)}
               rows={4}
               placeholder="输入项目描述..."
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
@@ -121,9 +127,7 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
 
           {/* 专案经理 */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              专案经理
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">专案经理</label>
             <div className="flex items-center gap-3 p-3 border border-gray-300 rounded-lg">
               <img
                 src="https://api.dicebear.com/7.x/avataaars/svg?seed=Manager"
@@ -136,12 +140,10 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
 
           {/* 团队成员 */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              团队成员
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">团队成员</label>
             <div className="flex items-center gap-3 p-3 border border-gray-300 rounded-lg">
               <div className="flex items-center -space-x-2">
-                {['A', 'B', 'C'].map((member) => (
+                {['A', 'B', 'C'].map(member => (
                   <img
                     key={member}
                     src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member}`}
@@ -176,4 +178,3 @@ export default function NewProjectModal({ isOpen, onClose, onSubmit }: NewProjec
     </div>
   );
 }
-

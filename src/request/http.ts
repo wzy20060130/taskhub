@@ -31,12 +31,12 @@ http.interceptors.request.use(
     }
     return config;
   },
-  (error) => Promise.reject(error)
+  error => Promise.reject(error)
 );
 
 // ------------------------- 响应拦截器 -------------------------
 http.interceptors.response.use(
-  (response) => {
+  response => {
     const res = response.data as ApiResponse;
 
     if (res.code !== undefined && res.code !== SUCCESS_CODE) {
@@ -47,7 +47,7 @@ http.interceptors.response.use(
 
     return response.data;
   },
-  (error) => {
+  error => {
     if (error.response) {
       const { status } = error.response;
       if (status === 401) {
